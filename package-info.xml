@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>smftricks:bbcyou</id>
+	<name>BBC You</name>
+	<version>2.0</version>
+	<type>modification</type>
+	<install for="2.0.0 - 2.99.99">
+
+		<!-- Mod Readme -->
+		<readme parsebbc="true">readme.txt</readme>
+
+		<!-- BBC Files -->
+		<require-dir name="Sources" destination="$boarddir">Source file</require-dir>
+
+		<!-- Hooks -->
+		<code>hooks.php</code>
+
+	</install>
+	
+	<uninstall for="2.0.0 - 2.99.99">
+
+		<!-- Hooks Remove -->
+		<code>remove.php</code>
+
+		<!-- Source Files -->
+		<remove-file name="$sourcedir/BBC-You.php">Source admin</remove-file>
+
+	</uninstall>
+	
+</package-info>

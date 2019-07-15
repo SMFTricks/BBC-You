@@ -2,7 +2,7 @@
 
 /**
  * @package BBC You
- * @version 2.1
+ * @version 2.0
  * @author Diego Andrés <diegoandres_cortes@outlook.com>
  * @copyright Copyright (c) 2015, Diego Andrés
  * @license https://www.mozilla.org/en-US/MPL/2.0/

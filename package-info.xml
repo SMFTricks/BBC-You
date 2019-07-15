@@ -3,31 +3,29 @@
 <package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
 	<id>smftricks:bbcyou</id>
 	<name>BBC You</name>
-	<version>2.1</version>
+	<version>2.0</version>
 	<type>modification</type>
-	<install for="2.1 - 2.1.99, 2.1 Beta 1 - 3">
+	<install for="2.0.0 - 2.99.99">
 
 		<!-- Mod Readme -->
-		<readme lang="english" parsebbc="true" type="file">readme.txt</readme>
-		<!-- License -->
-		<license type="inline" parsebbc="false">
-			This Source Code Form is subject to the terms of the Mozilla Public
-			License, v. 2.0. If a copy of the MPL was not distributed with this
-			file, You can obtain one at https://www.mozilla.org/en-US/MPL/2.0/.
-		</license>
+		<readme parsebbc="true">readme.txt</readme>
+
 		<!-- BBC Files -->
-		<require-dir name="Sources" destination="$boarddir">Source file</require-dir>
+		<require-file name="BBC-You.php" destination="$sourcedir">Source file</require-file>
+
 		<!-- Hooks -->
-		<hook hook="integrate_pre_include" function="$sourcedir/BBC-You.php" file="" />
-		<hook hook="integrate_bbc_codes" function="BBCYou::bbc_code" file="$sourcedir/BBC-You.php" />
+		<code>hooks.php</code>
+
 	</install>
 	
-	<uninstall for="2.1 - 2.1.99, 2.1 Beta 1 - 3">
+	<uninstall for="2.0.0 - 2.99.99">
 
 		<!-- Hooks Remove -->
-		<hook hook="integrate_pre_include" function="$sourcedir/BBC-You.php" file="" reverse="true" />
-		<hook hook="integrate_bbc_codes" function="BBCYou::bbc_code" file="$sourcedir/BBC-You.php" reverse="true" />
+		<code>remove.php</code>
+
 		<!-- Source Files -->
-		<remove-file name="$sourcedir/BBC-You.php">Source file</remove-file>
+		<remove-file name="$sourcedir/BBC-You.php">Source admin</remove-file>
+
 	</uninstall>
+	
 </package-info>

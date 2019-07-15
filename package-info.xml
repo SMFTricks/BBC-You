@@ -5,7 +5,7 @@
 	<name>BBC You</name>
 	<version>2.1</version>
 	<type>modification</type>
-	<install for="2.1 - 2.1.99">
+	<install for="2.1 - 2.1.99, 2.1 Beta 1 - 3">
 
 		<!-- Mod Readme -->
 		<readme lang="english" parsebbc="true" type="file">readme.txt</readme>
@@ -22,7 +22,7 @@
 		<hook hook="integrate_bbc_codes" function="BBCYou::bbc_code" file="$sourcedir/BBC-You.php" />
 	</install>
 	
-	<uninstall for="2.1 - 2.1.99">
+	<uninstall for="2.1 - 2.1.99, 2.1 Beta 1 - 3">
 
 		<!-- Hooks Remove -->
 		<hook hook="integrate_pre_include" function="$sourcedir/BBC-You.php" file="" reverse="true" />

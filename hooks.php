@@ -2,10 +2,10 @@
 
 /**
  * @package BBC You
- * @version 2.0
+ * @version 2.1
  * @author Diego Andrés <diegoandres_cortes@outlook.com>
- * @copyright Copyright (c) 2015, Diego Andrés
- * @license http://www.mozilla.org/MPL/MPL-1.1.html
+ * @copyright Copyright (c) 2019, SMF Tricks
+ * @license https://www.mozilla.org/en-US/MPL/2.0/
  */
 
 	if (file_exists(dirname(__FILE__) . '/SSI.php') && !defined('SMF'))

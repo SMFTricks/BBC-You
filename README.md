@@ -3,7 +3,7 @@
  </p>
 
 ## BBC You
-Developed by Diego Andrés: https://github.com/DiegoAndresCortes
+Developed by [Diego Andrés](https://github.com/DiegoAndresCortes)
 
 ## Introduction
 * BBC [you] tag adds a BBC tag that allows users to echo out the name of the user who is reading the topic.

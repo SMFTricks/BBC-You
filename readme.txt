@@ -7,4 +7,4 @@
 [size=13pt][color=red]Introduction[/color][/size]
 [size=8pt]BBC [you] tag adds a BBC tag that allows users to echo out the name of the user who is reading the topic.[/size]
 [hr]
-[size=12pt][color=purple][url=https://github.com/SMFTricks/Simple-Pokes]GitHub[/url][/color][/size]
+[size=12pt][color=purple][url=https://github.com/SMFTricks/BBC-You]GitHub[/url][/color][/size]

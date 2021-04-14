@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+<name>BBC You</name>
+<id>smftricks:bbcyou</id>
+<version>2.0.1</version>
+
+<file name="$sourcedir/Subs-Editor.php">
+	<operation>
+		<search position="before"><![CDATA[			array(
+				'image' => 'hr',
+				'code' => 'hr',
+				'before' => '[hr]',
+				'description' => $txt['horizontal_rule']
+			),]]></search>
+		<add><![CDATA[
+			array(),
+			array(
+				'image' => 'you',
+				'code' => 'you',
+				'before' => '[you]',
+				'description' => $txt['bbc_you']
+			),
+			array(),]]></add>
+	</operation>
+</file>
+
+<file name="$themedir/languages/Modifications.english.php">
+	<operation>
+		<search position="end" />
+		<add><![CDATA[
+$txt['bbc_you'] = 'Inserts the name of the person reading';
+]]></add>
+	</operation>
+</file>
+
+<file name="$themedir/languages/Modifications.english-utf8.php">
+	<operation>
+		<search position="end" />
+		<add><![CDATA[
+$txt['bbc_you'] = 'Inserts the name of the person reading';
+]]></add>
+	</operation>
+</file>
+</modification>

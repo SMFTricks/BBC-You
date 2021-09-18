@@ -3,10 +3,9 @@
 <package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
 	<id>smftricks:bbcyou</id>
 	<name>BBC You</name>
-	<version>2.1</version>
+	<version>2.2</version>
 	<type>modification</type>
 	<install for="2.1 - 2.1.99, 2.1 Beta 1 - 3">
-
 		<!-- Mod Readme -->
 		<readme lang="english" parsebbc="true" type="file">readme.txt</readme>
 		<!-- License -->
@@ -15,17 +14,30 @@
 			License, v. 2.0. If a copy of the MPL was not distributed with this
 			file, You can obtain one at https://www.mozilla.org/en-US/MPL/2.0/.
 		</license>
+		<!-- Language Files -->
+		<require-dir name="Languages/bbcyou" destination="$languagedir">Language Files</require-dir>
 		<!-- BBC Files -->
 		<require-dir name="Sources" destination="$boarddir">Source file</require-dir>
+		<!-- Image -->
+		<require-file name="you.png" destination="$imagesdir/bbc" />
 		<!-- Hooks -->
 		<hook hook="integrate_bbc_codes" function="BBCYou::bbc_code" file="$sourcedir/BBC-You.php" />
+		<hook hook="integrate_modify_bbc_settings" function="BBCYou::settings" file="$sourcedir/BBC-You.php" />
+		<hook hook="integrate_bbc_buttons" function="BBCYou::button" file="$sourcedir/BBC-You.php" />
+		<!-- Redirect -->
+		<redirect url="?action=admin;area=featuresettings;sa=bbc">redirect.txt</redirect>
 	</install>
 	
 	<uninstall for="2.1 - 2.1.99, 2.1 Beta 1 - 3">
-
 		<!-- Hooks Remove -->
 		<hook hook="integrate_bbc_codes" function="BBCYou::bbc_code" file="$sourcedir/BBC-You.php" reverse="true" />
+		<hook hook="integrate_modify_bbc_settings" function="BBCYou::settings" file="$sourcedir/BBC-You.php" reverse="true" />
+		<hook hook="integrate_bbc_buttons" function="BBCYou::button" file="$sourcedir/BBC-You.php" reverse="true" />
 		<!-- Source Files -->
 		<remove-file name="$sourcedir/BBC-You.php">Source file</remove-file>
+		<!-- Language Files -->
+		<remove-dir name="$languagedir/bbcyou" >Language Files</remove-dir>
+		<!-- Image -->
+		<remove-file name="$imagesdir/bbc/you.png" />
 	</uninstall>
 </package-info>

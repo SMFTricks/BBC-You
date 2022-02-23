@@ -2,9 +2,9 @@
 
 /**
  * @package BBC You
- * @version 2.2
+ * @version 2.2.1
  * @author Diego Andrés <diegoandres_cortes@outlook.com>
- * @copyright Copyright (c) 2021, Diego Andrés
+ * @copyright Copyright (c) 2022, SMF Tricks
  * @license https://www.mozilla.org/en-US/MPL/2.0/
  */
 
@@ -13,6 +13,11 @@ if (!defined('SMF'))
 
 class BBCYou
 {
+	/**
+	 * Attach the content to the bbc.
+	 * 
+	 * @param array $codes The bbc codes
+	 */
 	public static function bbc_code(&$codes)
 	{
 		global $user_info, $txt;
@@ -24,6 +29,12 @@ class BBCYou
 		];
 	}
 
+	/**
+	 * Add a setting to the BBC settings.
+	 * 
+	 * @param array $bbc_settings The bbc settings
+	 * @return void
+	 */
 	public static function settings(&$bbc_settings)
 	{
 		global $txt;
@@ -36,6 +47,12 @@ class BBCYou
 		];
 	}
 
+	/**
+	 * Add the bbc to the editor toolbar
+	 * 
+	 * @param array $tags The bbc tags
+	 * @return void
+	 */
 	public static function button(&$tags)
 	{
 		global $txt, $modSettings;

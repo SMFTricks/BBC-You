@@ -3,11 +3,11 @@
 <package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
 	<id>smftricks:bbcyou</id>
 	<name>BBC You</name>
-	<version>2.2</version>
+	<version>2.2.1</version>
 	<type>modification</type>
-	<install for="2.1 - 2.1.99, 2.1 RC4">
+	<install for="2.1 - 2.1.99">
 		<!-- Mod Readme -->
-		<readme lang="english" parsebbc="true" type="file">readme.txt</readme>
+		<readme lang="english" parsebbc="true" type="file">readme/readme.english.txt</readme>
 		<!-- License -->
 		<license type="inline" parsebbc="false">
 			This Source Code Form is subject to the terms of the Mozilla Public
@@ -25,10 +25,10 @@
 		<hook hook="integrate_modify_bbc_settings" function="BBCYou::settings" file="$sourcedir/BBC-You.php" />
 		<hook hook="integrate_bbc_buttons" function="BBCYou::button" file="$sourcedir/BBC-You.php" />
 		<!-- Redirect -->
-		<redirect url="?action=admin;area=featuresettings;sa=bbc">redirect.txt</redirect>
+		<redirect url="?action=admin;area=featuresettings;sa=bbc;" />
 	</install>
 	
-	<uninstall for="2.1 - 2.1.99, 2.1 RC4">
+	<uninstall for="2.1 - 2.1.99">
 		<!-- Hooks Remove -->
 		<hook hook="integrate_bbc_codes" function="BBCYou::bbc_code" file="$sourcedir/BBC-You.php" reverse="true" />
 		<hook hook="integrate_modify_bbc_settings" function="BBCYou::settings" file="$sourcedir/BBC-You.php" reverse="true" />
